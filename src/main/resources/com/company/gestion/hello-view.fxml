@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.company.gestion.MainFrmApplicationController"
+      spacing="10"
+      alignment="CENTER">
+
+    <padding>
+        <Insets right="3" bottom="3" left="3"/>
+    </padding>
+
+    <!-- Barre de menu -->
+    <MenuBar>
+        <Menu text="Fichier">
+            <MenuItem text="Enregistrer" onAction="#onEnregistrerAction"/>
+            <MenuItem text="Quitter" onAction="#onQuitterAction"/>
+        </Menu>
+        <Menu text="Contacts">
+            <MenuItem text="Liste des Contacts" onAction="#onListeContactsAction"/>
+            <MenuItem text="Rechercher" onAction="#onRechercherAction"/>
+        </Menu>
+    </MenuBar>
+
+    <!-- Zone principale -->
+    <TableView fx:id="contactsTableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Code" fx:id="codeColumn" prefWidth="100"/>
+            <TableColumn text="Nom" fx:id="nameColumn" prefWidth="100"/>
+            <TableColumn text="Date de naissance" fx:id="birthDate" prefWidth="150"/>
+            <TableColumn text="Adresse" fx:id="address" prefWidth="100"/>
+            <TableColumn text="Email" fx:id="email" prefWidth="100"/>
+            <TableColumn text="Numéro de téléphone" fx:id="telNumber" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <!-- Boutons d'action -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Ajouter Contact" onAction="#onAjouterContactAction"/>
+        <Button text="Modifier Contact" onAction="#onModifierContactAction"/>
+        <Button text="Supprimer Contact" onAction="#onSupprimerContactAction"/>
+    </HBox>
+</VBox>

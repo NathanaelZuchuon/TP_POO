@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StolenItemChecker" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.company.gestion.StolenItemChecker" />
+    <module name="gestion" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
